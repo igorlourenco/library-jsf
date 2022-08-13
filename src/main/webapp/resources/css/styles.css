@@ -82,6 +82,5 @@ form {
 @media screen and (max-width: 1600px) {
 	form {
 		width: 70%;
-		background-color: green;
 	}
 }
