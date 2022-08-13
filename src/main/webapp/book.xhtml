@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>Hello World JSF</title>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+
+	<h:outputStylesheet library="css" name="styles.css" />
+</h:head>
+<h:body>
+	<div class="container">
+		<h1>Book Store</h1>
+		<h:form>
+
+			<div class="form-item">
+				<h:outputLabel value="Title" />
+				<h:inputText class="input-text w-75" id="title" required="true"
+					requiredMessage="Title is required"
+					a:placeholder="Julieta Lambe Cu - Autobiography"
+					value="#{bookController.title}" />
+			</div>
+
+			<div class="form-item">
+				<h:outputLabel class="label" value="Author" />
+				<h:inputText class="input-text w-75" id="author" required="true"
+					requiredMessage="Author is required" a:placeholder="Juliana Paz"
+					value="#{bookController.author}" />
+			</div>
+
+			<div class="form-item">
+				<h:outputLabel value="Genre" />
+				<h:inputText class="input-text w-75" id="genre" required="true"
+					requiredMessage="Genre is required" a:placeholder="Biography"
+					value="#{bookController.genre}" />
+			</div>
+
+			<div class="form-item">
+				<h:outputLabel value="Year of Publishing" />
+				<h:inputText class="input-text w-75" id="year" required="true"
+					requiredMessage="Year is required" a:placeholder="2003"
+					value="#{bookController.year}" />
+			</div>
+
+			<div class="form-item">
+				<h:outputLabel value="Publishing Company" />
+				<h:inputText class="input-text w-75" id="company" required="true"
+					requiredMessage="Publishing company is required"
+					a:placeholder="Biography" value="#{bookController.company}" />
+			</div>
+
+			<div class="button-container">
+				<h:commandButton class="button-register" value="Register"
+					actionListener="#{bookController.saveBook}" />
+				<h:commandButton class="button-clear" value="Clear"
+					actionListener="#{bookController.clearForm}" />
+			</div>
+
+		</h:form>
+		<h:message for="title" />
+		<br />
+		<h:message for="author" />
+		<br />
+		<h:message for="genre" />
+		<br />
+		<h:message for="year" />
+		<br />
+		<h:message for="company" />
+
+
+
+	</div>
+</h:body>
+</html>
