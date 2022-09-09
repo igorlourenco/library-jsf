@@ -83,3 +83,12 @@ form {
 	box-shadow: 0px 0px 0px rgb(0 0 0/ 13%);
 	background-color: rgb(0 0 0/ 3%);
 }
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width: 1600px) {
+	form {
+		width: 70%;
+	}
+}
+>>>>>>> branch 'main' of https://github.com/igorlourenco/library-jsf.git
